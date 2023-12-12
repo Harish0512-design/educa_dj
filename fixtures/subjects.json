@@ -1,0 +1,63 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Computer Science",
+    "created_on": "2023-12-12T16:49:56.557Z",
+    "updated_on": "2023-12-12T16:49:56.558Z"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "Physics",
+    "created_on": "2023-12-12T16:50:01.624Z",
+    "updated_on": "2023-12-12T16:50:01.624Z"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 3,
+  "fields": {
+    "title": "Mathematics",
+    "created_on": "2023-12-12T16:50:14.998Z",
+    "updated_on": "2023-12-12T16:50:14.998Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "title": "Operating Systems",
+    "created_on": "2023-12-12T16:53:08.803Z",
+    "updated_on": "2023-12-12T16:53:08.803Z",
+    "subject": 1,
+    "owner": 1,
+    "overview": "Operating System Tutorial provides the basic and advanced concepts of operating system . Our Operating system tutorial is designed for beginners, professionals and GATE aspirants. We have designed this tutorial after the completion of a deep research about every concept.\r\n\r\nThe content is described in detailed manner and has the ability to answer most of your queries. The tutorial also contains the numerical examples based on previous year GATE questions which will help you to address the problems in a practical manner."
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "title": "Operating Systems and its Types",
+    "created_on": "2023-12-12T16:53:08.804Z",
+    "updated_on": "2023-12-12T16:53:08.804Z",
+    "course": 1,
+    "description": "Operating System can be defined as an interface between user and the hardware. It provides an environment to the user so that, the user can perform its task in convenient and efficient way.\r\n\r\nThe Operating System Tutorial is divided into various parts based on its functions such as Process Management, Process Synchronization, Deadlocks and File Management."
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "title": "Process Management",
+    "created_on": "2023-12-12T16:53:08.805Z",
+    "updated_on": "2023-12-12T16:53:08.805Z",
+    "course": 1,
+    "description": "A Program does nothing unless its instructions are executed by a CPU. A program in execution is called a process. In order to accomplish its task, process needs the computer resources.\r\n\r\nThere may exist more than one process in the system which may require the same resource at the same time. Therefore, the operating system has to manage all the processes and the resources in a convenient and efficient way.\r\n\r\nSome resources may need to be executed by one process at one time to maintain the consistency otherwise the system can become inconsistent and deadlock may occur.\r\n\r\nThe operating system is responsible for the following activities in connection with Process Management\r\n\r\nScheduling processes and threads on the CPUs.\r\n1. Creating and deleting both user and system processes.\r\n2. Suspending and resuming processes.\r\n3. Providing mechanisms for process synchronization.\r\n4. Providing mechanisms for process communication"
+  }
+}
+]
