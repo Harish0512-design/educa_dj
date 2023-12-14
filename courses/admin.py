@@ -1,8 +1,13 @@
 from django.contrib import admin
-from . models import Subject, Course, Module
+from .models import Subject, Course, Module, Content, Text, File, Image, Video
 
 # Register your models here.
 admin.site.register(Subject)
+admin.site.register(Content)
+admin.site.register(Text)
+admin.site.register(File)
+admin.site.register(Image)
+admin.site.register(Video)
 
 
 class ModuleInline(admin.StackedInline):
