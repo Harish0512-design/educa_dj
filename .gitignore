@@ -28,3 +28,10 @@ archive.zip
 
 # macOS
 .DS_Store
+
+#sqlite3
+db.sqlite3
+
+#intellij
+*.iml
+

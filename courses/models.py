@@ -1,7 +1,9 @@
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 
-from commons.models import BaseModel
+from commons.models import BaseModel, ItemBaseModel
 
 
 # Create your models here.
@@ -31,3 +33,27 @@ class Module(BaseModel):
 
     def __str__(self):
         return self.title
+
+
+class Content(models.Model):
+    module = models.ForeignKey(to=Module, on_delete=models.CASCADE, related_name='contents')
+    content_type = models.ForeignKey(to=ContentType, on_delete=models.CASCADE,
+                                     limit_choices_to={'model__in': ('text', 'image', 'file', 'video')})
+    object_id = models.PositiveIntegerField()
+    item = GenericForeignKey('content_type', 'object_id')
+
+
+class Text(ItemBaseModel):
+    content = models.TextField()
+
+
+class Image(ItemBaseModel):
+    image = models.ImageField(upload_to='images')
+
+
+class Video(ItemBaseModel):
+    video_url = models.URLField()
+
+
+class File(ItemBaseModel):
+    file = models.FileField(upload_to='files')
